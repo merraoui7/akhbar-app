@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="1dp"
+    android:id="@+id/newslinearlt"
+    >
+
+    <ImageView
+        android:id="@+id/newsimg_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/vaccin_190517" />
+
+    <TextView
+        android:id="@+id/titletxt_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="2dp"
+        android:text="معهد باستور المغرب يوضح حقيقة نفاذ لقاح داء السعار"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="25sp" />
+
+</LinearLayout>
