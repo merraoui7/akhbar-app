@@ -11,11 +11,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
+import com.zeneo.newsapp.Activities.MainActivity;
+import com.zeneo.newsapp.Activities.NewsActivity;
 import com.zeneo.newsapp.Activities.R;
 import com.zeneo.newsapp.Activities.DisplayActivity;
 import com.zeneo.newsapp.Model.News;
 
 import java.util.List;
+import java.util.zip.CheckedOutputStream;
 
 public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHolder> {
 
@@ -41,7 +46,8 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
         holder.lt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,DisplayActivity.class);
+                Intent intent = new Intent(context, DisplayActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("url",list.get(position).getUrl());
                 context.startActivity(intent);
             }
@@ -49,7 +55,14 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
 
         holder.title.setText(list.get(position).getTitle());
         if (list.get(position).getImage()!=null){
-            Glide.with(context).load(list.get(position).getImage()).into(holder.image);
+            RequestOptions myOptions = new RequestOptions()
+                    .skipMemoryCache(true)
+                    .diskCacheStrategy(DiskCacheStrategy.NONE);
+            Glide.with(context)
+                    .load(list.get(position)
+                            .getImage())
+                    .apply(myOptions)
+                    .into(holder.image);
         }else {
             holder.image.setImageResource(R.drawable.news_bg);
         }
