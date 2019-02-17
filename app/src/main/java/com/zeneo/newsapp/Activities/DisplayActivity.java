@@ -2,6 +2,7 @@ package com.zeneo.newsapp.Activities;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+<<<<<<< HEAD
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -12,17 +13,29 @@ import android.view.ViewParent;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
+=======
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 public class DisplayActivity extends AppCompatActivity {
 
+<<<<<<< HEAD
     String url;
 
+=======
+    WebView webView;
+    String url;
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
+<<<<<<< HEAD
 
         url = getIntent().getExtras().getString("url");
 
@@ -79,3 +92,34 @@ public class DisplayActivity extends AppCompatActivity {
         return i;
     }
 }
+=======
+        url = getIntent().getExtras().getString("url");
+
+        webView = new WebView(getApplicationContext());
+        webView.getSettings().setJavaScriptEnabled(true); // enable javascript
+
+        final Activity activity = this;
+
+        webView.setWebViewClient(new WebViewClient() {
+            @SuppressWarnings("deprecation")
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            }
+            @TargetApi(android.os.Build.VERSION_CODES.M)
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest req, WebResourceError rerr) {
+                // Redirect to deprecated method, so you can use it in all SDK versions
+                onReceivedError(view, rerr.getErrorCode(), rerr.getDescription().toString(), req.getUrl().toString());
+            }
+        });
+
+        webView .loadUrl(url);
+        setContentView(webView );
+
+    }
+
+
+}
+
+
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7

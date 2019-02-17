@@ -1,10 +1,29 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">يمين</string>
     <string name="action_back">رجوع</string>
+=======
+    <string name="app_name">Turkey Drama App</string>
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+<<<<<<< HEAD
+=======
+    <string-array name="recycle_title">
+        <item>نقانق</item>
+        <item>شطيرة</item>
+        <item>بطيخة</item>
+        <item>بطاطس</item>
+        <item>طماطم</item>
+        <item>بصل</item>
+        <item>سمك</item>
+        <item>لحم</item>
+        <item>بيض</item>
+        <item>خبز</item>
+    </string-array>
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 </resources>

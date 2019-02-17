@@ -10,17 +10,26 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+<<<<<<< HEAD
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.zeneo.newsapp.Activities.MainActivity;
 import com.zeneo.newsapp.Activities.NewsActivity;
 import com.zeneo.newsapp.Activities.R;
+=======
+import com.zeneo.newsapp.Activities.R;
+
+import com.squareup.picasso.Picasso;
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 import com.zeneo.newsapp.Activities.DisplayActivity;
 import com.zeneo.newsapp.Model.News;
 
 import java.util.List;
+<<<<<<< HEAD
 import java.util.zip.CheckedOutputStream;
+=======
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 
 public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHolder> {
 
@@ -46,8 +55,12 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
         holder.lt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 Intent intent = new Intent(context, DisplayActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+=======
+                Intent intent = new Intent(context,DisplayActivity.class);
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
                 intent.putExtra("url",list.get(position).getUrl());
                 context.startActivity(intent);
             }
@@ -55,6 +68,7 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
 
         holder.title.setText(list.get(position).getTitle());
         if (list.get(position).getImage()!=null){
+<<<<<<< HEAD
             RequestOptions myOptions = new RequestOptions()
                     .skipMemoryCache(true)
                     .diskCacheStrategy(DiskCacheStrategy.NONE);
@@ -63,6 +77,9 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.ViewHo
                             .getImage())
                     .apply(myOptions)
                     .into(holder.image);
+=======
+            Picasso.get().load(list.get(position).getImage()).into(holder.image);
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
         }else {
             holder.image.setImageResource(R.drawable.news_bg);
         }

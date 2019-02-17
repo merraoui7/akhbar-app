@@ -1,11 +1,18 @@
 <resources>
 
+<<<<<<< HEAD
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+=======
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+<<<<<<< HEAD
     <style name="ThemeOverlay.AppCompat.ActionBar">
         <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back_24px</item>
         <item name="android:textColorPrimary">@android:color/white</item>
@@ -13,6 +20,8 @@
         <item name="actionMenuTextColor">@android:color/white</item>
     </style>
     
+=======
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -22,9 +31,12 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+<<<<<<< HEAD
     <style name="AppTheme.Launcher" >
         <item name="android:windowBackground">@drawable/launch_screen</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
+=======
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 </resources>

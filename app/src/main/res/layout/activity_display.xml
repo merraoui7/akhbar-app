@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:orientation="vertical" tools:context="com.zeneo.newsapp.Activities.DisplayActivity">
 
     <android.support.v7.widget.Toolbar
@@ -34,5 +35,8 @@
 
     </ScrollView>
 
+=======
+    tools:context="com.zeneo.newsapp.Activities.DisplayActivity">
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 
 </LinearLayout>

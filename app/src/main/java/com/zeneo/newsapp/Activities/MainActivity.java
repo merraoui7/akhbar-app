@@ -1,5 +1,6 @@
 package com.zeneo.newsapp.Activities;
 
+<<<<<<< HEAD
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
@@ -14,12 +15,28 @@ import com.zeneo.newsapp.Adapter.MainListAdapter;
 import com.zeneo.newsapp.Model.WebData;
 import com.zeneo.newsapp.Model.WebSites;
 import java.io.File;
+=======
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+
+import com.zeneo.newsapp.Adapter.MainListAdapter;
+import com.zeneo.newsapp.Model.WebData;
+import com.zeneo.newsapp.Model.WebSites;
+import com.zeneo.newsapp.Activities.R;
+
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     WebData webData = new WebData();
+<<<<<<< HEAD
     int [] images = webData.images;
 
     List<WebSites> list = new ArrayList<>();
@@ -42,6 +59,25 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0 ;i<images.length ;i++ ){
             list.add(new WebSites(images[i]));
+=======
+    String [] names =webData.names;
+    int [] images =webData.images;
+
+    List<WebSites> list = new ArrayList<>();
+    ListView listView;
+    MainListAdapter mainListAdapter;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        listView = (ListView)findViewById(R.id.mainlist);
+
+        for (int i = 0 ;i<images.length ;i++ ){
+            list.add(new WebSites(names[i],images[i]));
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
         }
         mainListAdapter = new MainListAdapter(getApplicationContext(),list);
         listView.setAdapter(mainListAdapter);
@@ -56,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+<<<<<<< HEAD
 }
 
     /*Handler handler = new Handler();
@@ -98,4 +135,9 @@ public class MainActivity extends AppCompatActivity {
         return ms;
     }*/
 
+=======
+
+
+    }
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 }

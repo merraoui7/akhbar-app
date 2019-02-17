@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context="com.zeneo.newsapp.Activities.NewsActivity">
 
+<<<<<<< HEAD
     <android.support.v7.widget.Toolbar
     android:id="@+id/my_toolbar"
     android:layout_width="match_parent"
@@ -35,4 +36,10 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
         android:paddingBottom="10dp"/>
+=======
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/akhbarlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 </LinearLayout>

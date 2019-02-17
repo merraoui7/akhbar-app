@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:orientation="vertical"
     android:layout_margin="0dp"
     android:padding="0dp"
@@ -42,5 +43,13 @@
         android:scrollbarStyle="outsideOverlay"
         android:padding="15dp"
         />
+=======
+    tools:context="com.zeneo.newsapp.Activities.MainActivity">
+
+    <ListView
+        android:id="@+id/mainlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+>>>>>>> b36c8c45a96fc4dfdcc9a0d2f1cc743e3efee5d7
 
 </LinearLayout>
